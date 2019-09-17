@@ -2,3 +2,9 @@
 	path = zlux-editor
 	url = git@github.com:zowe/zlux-editor.git
 	branch = master
+[submodule "IPL-Explorer/zss-ipl-plugin/deps/zowe-common-c"]
+	path = IPL-Explorer/zss-ipl-plugin/deps/zowe-common-c
+	url = git@github.com:zowe/zowe-common-c.git
+[submodule "IPL-Explorer/zss-ipl-plugin/deps/zss"]
+	path = IPL-Explorer/zss-ipl-plugin/deps/zss
+	url = git@github.com:zowe/zss.git
