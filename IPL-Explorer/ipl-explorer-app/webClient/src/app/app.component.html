@@ -1,0 +1,46 @@
+<!-- 
+  This program and the accompanying materials are
+  made available under the terms of the Eclipse Public License v2.0 which accompanies
+  this distribution, and is available at https://www.eclipse.org/legal/epl-v20.html
+  
+  SPDX-License-Identifier: EPL-2.0
+  
+  Copyright Contributors to the Zowe Project.
+-->
+<div *ngIf="dataLoading">
+  Fetching information. Please wait...
+  </div>
+<div *ngIf="!dataLoading">
+    <select class="custom-select" #t (change)="changeMember(t.value)">
+        <option value="" disabled>Select to view</option>
+        <option *ngFor="let selectMember of arrayMember" [ngValue]="selectMember">{{selectMember}}</option>
+      </select>
+      
+      <div *ngIf="mainSelection">
+        <h4>Select member</h4>
+      
+        <select class="custom-select" #s (change)="changesubOptions(s.value)">
+          <option value="" disabled>Select Member</option>
+          <option *ngFor="let item of SubOptions" >{{item.Member}}</option>
+        </select>
+      
+        <h4>Member:{{memberSelected.Member}}  --- DataSet: {{memberSelected.Dataset.split(':')[0]}}  ---  Volume: {{memberSelected.Dataset.split(':')[1]}}</h4>
+        <button style="background-color:#8cb4ed;color:white" (click)="callExternalEvent()">Open in Editor!</button>
+        <div *ngFor="let line of memberSelected.Lines">
+          <p style="white-space:pre; font-family:courier; margin:0;" >{{line}} </p>      
+        </div>
+      </div>
+
+</div>
+<zlux-popup-manager>
+</zlux-popup-manager>
+
+<!-- 
+  This program and the accompanying materials are
+  made available under the terms of the Eclipse Public License v2.0 which accompanies
+  this distribution, and is available at https://www.eclipse.org/legal/epl-v20.html
+  
+  SPDX-License-Identifier: EPL-2.0
+  
+  Copyright Contributors to the Zowe Project.
+-->

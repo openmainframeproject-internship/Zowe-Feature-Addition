@@ -1,0 +1,21 @@
+{
+  "identifier": "org.zowe.ipl",
+  "apiVersion": "1.0.0",
+  "pluginVersion": "0.0.1",
+  "pluginType": "application",
+  "webContent": {
+    "framework": "angular2",
+    "launchDefinition": {
+      "pluginShortNameKey": "iplExplorer",
+      "pluginShortNameDefault": "IPL Explorer",
+      "imageSrc": "assets/icon.png"
+    },
+    "descriptionKey": "iplExplorerDescription",
+    "descriptionDefault": "Displays Systems IPL information",
+    "isSingleWindowApp": true,
+    "defaultWindowStyle": {
+      "width": 1300,
+      "height": 500
+    }
+  }
+}
