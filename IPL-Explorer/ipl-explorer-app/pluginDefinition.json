@@ -1,5 +1,5 @@
 {
-  "identifier": "org.zowe.ipl",
+  "identifier": "org.zowe.ipl.explorer",
   "apiVersion": "1.0.0",
   "pluginVersion": "0.0.1",
   "pluginType": "application",
